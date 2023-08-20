@@ -194,6 +194,8 @@ func (c *APIClient) parseV2rayNodeResponse(s *serverConfig) (*api.NodeInfo, erro
 		Host:              host,
 		EnableVless:       c.EnableVless,
 		VlessFlow:         c.VlessFlow,
+		PrivateKey:        s.TlsSettings.PrivateKey,
+		ShortId:           s.TlsSettings.ShortId,
 		ServiceName:       s.NetworkSettings.ServiceName,
 		Header:            header,
 		NameServerConfig:  s.parseDNSConfig(),

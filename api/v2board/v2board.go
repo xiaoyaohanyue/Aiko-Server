@@ -30,6 +30,8 @@ type APIClient struct {
 	NodeType      string
 	EnableVless   bool
 	VlessFlow     string
+	PrivateKey    string
+	ShortId       string
 	SpeedLimit    float64
 	DeviceLimit   int
 	LocalRuleList []api.DetectRule
