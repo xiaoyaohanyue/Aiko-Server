@@ -6,7 +6,7 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/AikoCute-Offical/AikoR/api"
+	"github.com/Github-Aiko/AikoR/api"
 )
 
 // readLocalRuleList reads the local rule list file

@@ -6,7 +6,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/AikoCute-Offical/AikoR/app/mydispatcher"
+	"github.com/Github-Aiko/AikoR/app/mydispatcher"
 
 	"github.com/imdario/mergo"
 	"github.com/r3labs/diff/v2"
@@ -16,16 +16,16 @@ import (
 	"github.com/xtls/xray-core/core"
 	"github.com/xtls/xray-core/infra/conf"
 
-	_ "github.com/AikoCute-Offical/AikoR/AikoR/distro/all"
-	"github.com/AikoCute-Offical/AikoR/api"
-	"github.com/AikoCute-Offical/AikoR/api/aiko"
-	"github.com/AikoCute-Offical/AikoR/api/pmpanel"
-	"github.com/AikoCute-Offical/AikoR/api/proxypanel"
-	"github.com/AikoCute-Offical/AikoR/api/sspanel"
-	"github.com/AikoCute-Offical/AikoR/api/v2board"
-	"github.com/AikoCute-Offical/AikoR/api/v2raysocks"
-	"github.com/AikoCute-Offical/AikoR/service"
-	"github.com/AikoCute-Offical/AikoR/service/controller"
+	_ "github.com/Github-Aiko/AikoR/AikoR/distro/all"
+	"github.com/Github-Aiko/AikoR/api"
+	"github.com/Github-Aiko/AikoR/api/aiko"
+	"github.com/Github-Aiko/AikoR/api/pmpanel"
+	"github.com/Github-Aiko/AikoR/api/proxypanel"
+	"github.com/Github-Aiko/AikoR/api/sspanel"
+	"github.com/Github-Aiko/AikoR/api/v2board"
+	"github.com/Github-Aiko/AikoR/api/v2raysocks"
+	"github.com/Github-Aiko/AikoR/service"
+	"github.com/Github-Aiko/AikoR/service/controller"
 )
 
 // Panel Structure

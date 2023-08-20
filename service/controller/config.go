@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"github.com/AikoCute-Offical/AikoR/common/limiter"
-	"github.com/AikoCute-Offical/AikoR/common/mylego"
+	"github.com/Github-Aiko/AikoR/common/limiter"
+	"github.com/Github-Aiko/AikoR/common/mylego"
 )
 
 type Config struct {

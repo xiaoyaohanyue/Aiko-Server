@@ -16,7 +16,7 @@ import (
 
 	"github.com/go-resty/resty/v2"
 
-	"github.com/AikoCute-Offical/AikoR/api"
+	"github.com/Github-Aiko/AikoR/api"
 )
 
 var (

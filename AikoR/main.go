@@ -15,7 +15,7 @@ import (
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 
-	"github.com/AikoCute-Offical/AikoR/panel"
+	"github.com/Github-Aiko/AikoR/panel"
 )
 
 var (

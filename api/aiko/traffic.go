@@ -1,6 +1,6 @@
 package aiko
 
-import "github.com/AikoCute-Offical/AikoR/api"
+import "github.com/Github-Aiko/AikoR/api"
 
 // ReportUserTraffic reports the user traffic
 func (c *APIClient) ReportUserTraffic(userTraffic *[]api.UserTraffic) error {
