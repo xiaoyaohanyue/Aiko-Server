@@ -395,7 +395,7 @@ func (c *APIClient) ReportIllegal(detectResultList *[]api.DetectResult) error {
 			SetBody(IllegalReport{
 				RuleID: r.RuleID,
 				UID:    r.UID,
-				Reason: "AikoR cannot save reason",
+				Reason: "Aiko-Server cannot save reason",
 			}).
 			SetResult(&Response{}).
 			ForceContentType("application/json").

@@ -2,19 +2,19 @@
 
 <div align="center">
 
-# AikoR
-AikoR Projects
+# Aiko-Server
+Aiko-Server Projects
 
-[![](https://img.shields.io/badge/Telegram-group-green?style=flat-square)](https://t.me/AikoAikoR)
+[![](https://img.shields.io/badge/Telegram-group-green?style=flat-square)](https://t.me/AikoAiko-Server)
 [![](https://img.shields.io/badge/Telegram-channel-blue?style=flat-square)](https://t.me/AikoCute_Support)
 [![](https://img.shields.io/github/downloads/github.com/github.com/AikoPanel/Aiko-Server/total.svg?style=flat-square)](https://github.com/github.com/AikoPanel/Aiko-Server/releases)
 [![](https://img.shields.io/github/v/release/github.com/github.com/AikoPanel/Aiko-Server?style=flat-square)](https://github.com/github.com/AikoPanel/Aiko-Server/releases)
-[![docker](https://img.shields.io/docker/v/aikocute/aikor?label=Docker%20image&sort=semver)](https://hub.docker.com/r/aikocute/aikor)
+[![docker](https://img.shields.io/docker/v/aikocute/Aiko-Server?label=Docker%20image&sort=semver)](https://hub.docker.com/r/aikocute/Aiko-Server)
 [![Go-Report](https://goreportcard.com/badge/github.com/github.com/AikoPanel/Aiko-Server?style=flat-square)](https://goreportcard.com/report/github.com/github.com/AikoPanel/Aiko-Server)
 </div>
 
-# Mô tả của AikoR
-AikoR hỗ trợ nhiều bảng điều khiển khác nhau (V2board, ProxyPanel, sspanel, Pmpanel ...)
+# Mô tả của Aiko-Server
+Aiko-Server hỗ trợ nhiều bảng điều khiển khác nhau (V2board, ProxyPanel, sspanel, Pmpanel ...)
 
 Một khung back-end dựa trên Xray, hỗ trợ các giao thức V2ay, Trojan, Shadowsocks, cực kỳ dễ dàng mở rộng và hỗ trợ kết nối nhiều bảng điều khiển。
 
@@ -63,11 +63,11 @@ Dự án này chỉ dành cho việc học tập, phát triển và bảo trì c
 
 ## Cài đặt phần mềm - phát hành
 ``
-wget --no-check-certificate -O AikoR.sh https://raw.githubusercontent.com/github.com/github.com/AikoPanel/Aiko-Server-Install/master/AikoR.sh && bash AikoR.sh
+wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/github.com/github.com/AikoPanel/Aiko-Server-Install/master/Aiko-Server.sh && bash Aiko-Server.sh
 ``
 ### Một bản cài đặt chính - docker
 ``
-docker pull aikocute / aikor: mới nhất && docker run --restart = always --name aikor -d -v $ {PATCH_TO_CONFIG} /aiko.json:/etc/AikoR/aiko.json --network = host aikocute / aikor: mới nhất
+docker pull aikocute / Aiko-Server: mới nhất && docker run --restart = always --name Aiko-Server -d -v $ {PATCH_TO_CONFIG} /aiko.json:/etc/Aiko-Server/aiko.json --network = host aikocute / Aiko-Server: mới nhất
 ``
 ### Tệp cấu hình và hướng dẫn chi tiết
 Đến sớm

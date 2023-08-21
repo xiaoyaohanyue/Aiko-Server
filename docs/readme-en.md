@@ -2,20 +2,20 @@
 
 <div align="center">
 
-# AikoR
-AikoR Projects
+# Aiko-Server
+Aiko-Server Projects
 
-[![](https://img.shields.io/badge/Telegram-group-green?style=flat-square)](https://t.me/AikoAikoR)
+[![](https://img.shields.io/badge/Telegram-group-green?style=flat-square)](https://t.me/AikoAiko-Server)
 [![](https://img.shields.io/badge/Telegram-channel-blue?style=flat-square)](https://t.me/AikoCute_Support)
 [![](https://img.shields.io/github/downloads/github.com/github.com/AikoPanel/Aiko-Server/total.svg?style=flat-square)](https://github.com/github.com/AikoPanel/Aiko-Server/releases)
 [![](https://img.shields.io/github/v/release/github.com/github.com/AikoPanel/Aiko-Server?style=flat-square)](https://github.com/github.com/AikoPanel/Aiko-Server/releases)
-[![docker](https://img.shields.io/docker/v/aikocute/aikor?label=Docker%20image&sort=semver)](https://hub.docker.com/r/aikocute/aikor)
+[![docker](https://img.shields.io/docker/v/aikocute/Aiko-Server?label=Docker%20image&sort=semver)](https://hub.docker.com/r/aikocute/Aiko-Server)
 [![Go-Report](https://goreportcard.com/badge/github.com/github.com/AikoPanel/Aiko-Server?style=flat-square)](https://goreportcard.com/report/github.com/github.com/AikoPanel/Aiko-Server)
 </div>
 
 
-# Description of AikoR
-AikoR Supports Various Panels (V2board, ProxyPanel, sspanel, Pmpanel...)
+# Description of Aiko-Server
+Aiko-Server Supports Various Panels (V2board, ProxyPanel, sspanel, Pmpanel...)
 
 An Xray-based back-end framework, supporting V2ay, Trojan, Shadowsocks protocols, extremely easily extensible and supporting multi-panel connection。
 
@@ -64,11 +64,11 @@ This project is for my personal learning, development and maintenance only, I do
 
 ## Software installation - release
 ```
-wget --no-check-certificate -O AikoR.sh https://raw.githubusercontent.com/github.com/AikoPanel/Aiko-Server-Install/master/AikoR.sh && bash AikoR.sh
+wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/github.com/AikoPanel/Aiko-Server-Install/master/Aiko-Server.sh && bash Aiko-Server.sh
 ```
 ### One main installation - docker
 ```
-docker pull aikocute/aikor:latest && docker run --restart=always --name aikor -d -v ${PATCH_TO_CONFIG}/aiko.json:/etc/AikoR/aiko.json --network=host aikocute/aikor:latest
+docker pull aikocute/Aiko-Server:latest && docker run --restart=always --name Aiko-Server -d -v ${PATCH_TO_CONFIG}/aiko.json:/etc/Aiko-Server/aiko.json --network=host aikocute/Aiko-Server:latest
 ```
 ### Configuration file and detailed instructions
 Comming Soon

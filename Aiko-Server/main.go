@@ -19,14 +19,14 @@ import (
 )
 
 var (
-	configFile   = flag.String("config", "", "Config file for AikoR.")
+	configFile   = flag.String("config", "", "Config file for Aiko-Server.")
 	printVersion = flag.Bool("version", false, "show version")
 )
 
 var (
 	version  = "1.3.10"
-	codename = "AikoR"
-	intro    = "Backend AikoR For Aiko"
+	codename = "Aiko-Server"
+	intro    = "Backend Aiko-Server For Aiko"
 )
 
 func showVersion() {
@@ -45,7 +45,7 @@ func getConfig() *viper.Viper {
 		config.SetConfigName(configNameOnly)
 		config.SetConfigType(strings.TrimPrefix(configFileExt, "."))
 		config.AddConfigPath(configPath)
-		// Set ASSET Path and Config Path for AikoR
+		// Set ASSET Path and Config Path for Aiko-Server
 		os.Setenv("XRAY_LOCATION_ASSET", configPath)
 		os.Setenv("XRAY_LOCATION_CONFIG", configPath)
 	} else {

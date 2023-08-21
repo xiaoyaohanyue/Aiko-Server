@@ -2,19 +2,19 @@
 
 <div align="center">
 
-# AikoR
-AikoR Projects
+# Aiko-Server
+Aiko-Server Projects
 
-[![](https://img.shields.io/badge/Telegram-group-green?style=flat-square)](https://t.me/AikoAikoR)
+[![](https://img.shields.io/badge/Telegram-group-green?style=flat-square)](https://t.me/AikoAiko-Server)
 [![](https://img.shields.io/badge/Telegram-channel-blue?style=flat-square)](https://t.me/AikoCute_Support)
 [![](https://img.shields.io/github/downloads/github.com/github.com/AikoPanel/Aiko-Server/total.svg?style=flat-square)](https://github.com/github.com/AikoPanel/Aiko-Server/releases)
 [![](https://img.shields.io/github/v/release/github.com/github.com/AikoPanel/Aiko-Server?style=flat-square)](https://github.com/github.com/AikoPanel/Aiko-Server/releases)
-[![docker](https://img.shields.io/docker/v/aikocute/aikor?label=Docker%20image&sort=semver)](https://hub.docker.com/r/aikocute/aikor)
+[![docker](https://img.shields.io/docker/v/aikocute/Aiko-Server?label=Docker%20image&sort=semver)](https://hub.docker.com/r/aikocute/Aiko-Server)
 [![Go-Report](https://goreportcard.com/badge/github.com/github.com/AikoPanel/Aiko-Server?style=flat-square)](https://goreportcard.com/report/github.com/github.com/AikoPanel/Aiko-Server)
 </div>
 
-# AikoR的描述
-AikoR 支持各种面板（V2board、ProxyPanel、sspanel、Pmpanel...）
+# Aiko-Server的描述
+Aiko-Server 支持各种面板（V2board、ProxyPanel、sspanel、Pmpanel...）
 
 基于Xray的后端框架，支持V2ay、Trojan、Shadowsocks协议，极易扩展，支持多面板连接。
 
@@ -63,11 +63,11 @@ AikoR 支持各种面板（V2board、ProxyPanel、sspanel、Pmpanel...）
 
 ## 软件安装-发布
 ```
-wget --no-check-certificate -O AikoR.sh https://raw.githubusercontent.com/github.com/github.com/AikoPanel/Aiko-Server-Install/master/AikoR.sh && bash AikoR.sh
+wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/github.com/github.com/AikoPanel/Aiko-Server-Install/master/Aiko-Server.sh && bash Aiko-Server.sh
 ```
 ### 一个主要安装 - docker
 ```
-docker pull aikocute/aikor:latest && docker run --restart=always --name aikor -d -v ${PATCH_TO_CONFIG}/aiko.json:/etc/AikoR/aiko.json --network=host aikocute/aikor:latest
+docker pull aikocute/Aiko-Server:latest && docker run --restart=always --name Aiko-Server -d -v ${PATCH_TO_CONFIG}/aiko.json:/etc/Aiko-Server/aiko.json --network=host aikocute/Aiko-Server:latest
 ```
 ### 配置文件和详细说明
 即将推出

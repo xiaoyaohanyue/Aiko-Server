@@ -11,7 +11,7 @@ import (
 	"github.com/AikoPanel/Xray-core/core"
 	"github.com/AikoPanel/Xray-core/infra/conf"
 
-	_ "github.com/AikoPanel/Aiko-Server/AikoR/distro/all"
+	_ "github.com/AikoPanel/Aiko-Server/Aiko-Server/distro/all"
 	"github.com/AikoPanel/Aiko-Server/api"
 	"github.com/AikoPanel/Aiko-Server/api/sspanel"
 	"github.com/AikoPanel/Aiko-Server/common/mylego"

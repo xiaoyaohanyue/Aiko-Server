@@ -1,4 +1,4 @@
-name: Build and test AikoR
+name: Build and test Aiko-Server
 on:
   workflow_dispatch:
   push:
@@ -49,10 +49,10 @@ jobs:
       - name: Get project dependencies
         run: go mod download
 
-      - name: Build AikoR
+      - name: Build Aiko-Server
         run: |
           mkdir -p build_assets
-          go build -v -o build_assets/AikoR -trimpath -ldflags "-s -w -buildid=" ./AikoR
+          go build -v -o build_assets/Aiko-Server -trimpath -ldflags "-s -w -buildid=" ./Aiko-Server
      
       - name: Prepare to release
         uses: nick-fields/retry@v2
@@ -63,14 +63,14 @@ jobs:
           command: |
             cp ${GITHUB_WORKSPACE}/README.md ./build_assets/README.md
             cp ${GITHUB_WORKSPACE}/LICENSE ./build_assets/LICENSE
-            cp ${GITHUB_WORKSPACE}/AikoR/dns.json ./build_assets/dns.json
-            cp ${GITHUB_WORKSPACE}/AikoR/route.json ./build_assets/route.json
-            cp ${GITHUB_WORKSPACE}/AikoR/custom_outbound.json ./build_assets/custom_outbound.json
-            cp ${GITHUB_WORKSPACE}/AikoR/custom_inbound.json ./build_assets/custom_inbound.json
-            cp ${GITHUB_WORKSPACE}/AikoR/AikoBlock ./build_assets/AikoBlock
-            cp ${GITHUB_WORKSPACE}/AikoR/acces.log.example ./build_assets/acces.log
-            cp ${GITHUB_WORKSPACE}/AikoR/error.log.example ./build_assets/error.log
-            cp ${GITHUB_WORKSPACE}/AikoR/aiko.yml.example ./build_assets/aiko.yml
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/dns.json ./build_assets/dns.json
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/route.json ./build_assets/route.json
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/custom_outbound.json ./build_assets/custom_outbound.json
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/custom_inbound.json ./build_assets/custom_inbound.json
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/AikoBlock ./build_assets/AikoBlock
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/acces.log.example ./build_assets/acces.log
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/error.log.example ./build_assets/error.log
+            cp ${GITHUB_WORKSPACE}/Aiko-Server/aiko.yml.example ./build_assets/aiko.yml
             LIST=('geoip geoip geoip' 'domain-list-community dlc geosite')
             for i in "${LIST[@]}"
             do
@@ -89,9 +89,9 @@ jobs:
         run: |
           pushd build_assets || exit 1
           touch -mt $(date +%Y01010000) *
-          zip -9vr ../AikoR-$ASSET_NAME.zip .
+          zip -9vr ../Aiko-Server-$ASSET_NAME.zip .
           popd || exit 1
-          FILE=./AikoR-$ASSET_NAME.zip
+          FILE=./Aiko-Server-$ASSET_NAME.zip
           DGST=$FILE.dgst
           for METHOD in {"md5","sha1","sha256","sha512"}
           do
@@ -99,11 +99,11 @@ jobs:
           done
       - name: Change the name
         run: |
-          mv build_assets AikoR-$ASSET_NAME
+          mv build_assets Aiko-Server-$ASSET_NAME
           
       - name: Upload files to Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: AikoR-${{ steps.get_filename.outputs.ASSET_NAME }}
+          name: Aiko-Server-${{ steps.get_filename.outputs.ASSET_NAME }}
           path: |
-            ./AikoR-${{ steps.get_filename.outputs.ASSET_NAME }}/*
+            ./Aiko-Server-${{ steps.get_filename.outputs.ASSET_NAME }}/*

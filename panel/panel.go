@@ -16,7 +16,7 @@ import (
 	"github.com/imdario/mergo"
 	"github.com/r3labs/diff/v2"
 
-	_ "github.com/AikoPanel/Aiko-Server/AikoR/distro/all"
+	_ "github.com/AikoPanel/Aiko-Server/Aiko-Server/distro/all"
 	"github.com/AikoPanel/Aiko-Server/api"
 	"github.com/AikoPanel/Aiko-Server/api/aiko"
 	"github.com/AikoPanel/Aiko-Server/api/pmpanel"
