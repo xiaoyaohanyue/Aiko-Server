@@ -105,17 +105,28 @@ jobs:
 
       - name: Get project dependencies
         run: go mod download
+      
+      - name: Get release version
+        if: ${{ github.event_name == 'release' }}
+        run: |
+          echo "version=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_ENV
 
+      - name: Get other version
+        if: ${{ github.event_name != 'release' }}
+        run: |
+          echo "version=${{ github.sha }}" >> $GITHUB_ENV
 
       - name: Build Aiko-Server
         run: |
+          echo "version: $version"
           mkdir -p build_assets
-          go build -v -o build_assets/Aiko-Server -trimpath -ldflags "-s -w -buildid=" ./Aiko-Server
+          go build -v -o build_assets/Aiko-Server -trimpath -ldflags "-X 'github.com/Github-Aiko/Aiko-Server/cmd.version=$version' -s -w -buildid="
 
       - name: Build Mips softfloat Aiko-Server
         if: matrix.goarch == 'mips' || matrix.goarch == 'mipsle'
         run: |
-          GOMIPS=softfloat go build -v -o build_assets/Aiko-Server_softfloat -trimpath -ldflags "-s -w -buildid=" ./Aiko-Server
+          echo "version: $version"
+          GOMIPS=softfloat go build -v -o build_assets/Aiko-Server_softfloat -trimpath -ldflags "-X 'github.com/Github-Aiko/Aiko-Server/cmd.version=$version' -s -w -buildid="
       - name: Rename Windows Aiko-Server
         if: matrix.goos == 'windows'
         run: |

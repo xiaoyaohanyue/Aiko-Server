@@ -19,6 +19,8 @@ require (
 	github.com/sagernet/sing v0.2.9
 	github.com/sagernet/sing-shadowsocks v0.2.4
 	github.com/shirou/gopsutil/v3 v3.23.7
+	github.com/sirupsen/logrus v1.8.1
+	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/crypto v0.12.0
@@ -95,6 +97,7 @@ require (
 	github.com/hashicorp/go-retryablehttp v0.7.4 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/iij/doapi v0.0.0-20190504054126-0bbf12d6d7df // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/infobloxopen/infoblox-go-client v1.1.1 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -156,7 +159,6 @@ require (
 	github.com/seiflotfy/cuckoofilter v0.0.0-20220411075957-e3b120b3f5fb // indirect
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
 	github.com/simplesurance/bunny-go v0.0.0-20221115111006-e11d9dc91f04 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/smartystreets/go-aws-auth v0.0.0-20180515143844-0c1422d1fdb9 // indirect
 	github.com/softlayer/softlayer-go v1.1.2 // indirect
 	github.com/softlayer/xmlrpc v0.0.0-20200409220501-5f089df7cb7e // indirect
