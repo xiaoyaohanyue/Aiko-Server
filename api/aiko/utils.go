@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/AikoPanel/Xray-core/common/net"
+	"github.com/AikoPanel/Xray-core/infra/conf"
 	"github.com/bitly/go-simplejson"
 	"github.com/go-resty/resty/v2"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/infra/conf"
 
 	"github.com/Github-Aiko/AikoR/api"
 )

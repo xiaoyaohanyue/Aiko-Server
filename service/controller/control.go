@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/core"
-	"github.com/xtls/xray-core/features/inbound"
-	"github.com/xtls/xray-core/features/outbound"
-	"github.com/xtls/xray-core/features/stats"
-	"github.com/xtls/xray-core/proxy"
+	"github.com/AikoPanel/Xray-core/common/protocol"
+	"github.com/AikoPanel/Xray-core/core"
+	"github.com/AikoPanel/Xray-core/features/inbound"
+	"github.com/AikoPanel/Xray-core/features/outbound"
+	"github.com/AikoPanel/Xray-core/features/stats"
+	"github.com/AikoPanel/Xray-core/proxy"
 
 	"github.com/Github-Aiko/AikoR/api"
 	"github.com/Github-Aiko/AikoR/common/limiter"

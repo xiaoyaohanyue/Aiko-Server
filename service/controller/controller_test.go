@@ -8,8 +8,8 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/xtls/xray-core/core"
-	"github.com/xtls/xray-core/infra/conf"
+	"github.com/AikoPanel/Xray-core/core"
+	"github.com/AikoPanel/Xray-core/infra/conf"
 
 	_ "github.com/Github-Aiko/AikoR/AikoR/distro/all"
 	"github.com/Github-Aiko/AikoR/api"

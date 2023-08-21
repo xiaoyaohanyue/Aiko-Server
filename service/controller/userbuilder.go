@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/AikoPanel/Xray-core/common/protocol"
+	"github.com/AikoPanel/Xray-core/common/serial"
+	"github.com/AikoPanel/Xray-core/infra/conf"
+	"github.com/AikoPanel/Xray-core/proxy/shadowsocks"
+	"github.com/AikoPanel/Xray-core/proxy/shadowsocks_2022"
+	"github.com/AikoPanel/Xray-core/proxy/trojan"
+	"github.com/AikoPanel/Xray-core/proxy/vless"
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/infra/conf"
-	"github.com/xtls/xray-core/proxy/shadowsocks"
-	"github.com/xtls/xray-core/proxy/shadowsocks_2022"
-	"github.com/xtls/xray-core/proxy/trojan"
-	"github.com/xtls/xray-core/proxy/vless"
 
 	"github.com/Github-Aiko/AikoR/api"
 )
@@ -62,7 +62,6 @@ func (c *Controller) buildTrojanUser(userInfo *[]api.UserInfo) (users []*protoco
 	for i, user := range *userInfo {
 		trojanAccount := &trojan.Account{
 			Password: user.UUID,
-			Flow:     "",
 		}
 		users[i] = &protocol.User{
 			Level:   0,
