@@ -13,7 +13,7 @@ import (
 	"github.com/bitly/go-simplejson"
 	"github.com/go-resty/resty/v2"
 
-	"github.com/Github-Aiko/AikoR/api"
+	"github.com/AikoPanel/Aiko-Server/api"
 )
 
 // New create an api instance

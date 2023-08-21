@@ -15,10 +15,10 @@ import (
 	"github.com/AikoPanel/Xray-core/features/routing"
 	"github.com/AikoPanel/Xray-core/features/stats"
 
-	"github.com/Github-Aiko/AikoR/api"
-	"github.com/Github-Aiko/AikoR/app/mydispatcher"
-	"github.com/Github-Aiko/AikoR/common/mylego"
-	"github.com/Github-Aiko/AikoR/common/serverstatus"
+	"github.com/AikoPanel/Aiko-Server/api"
+	"github.com/AikoPanel/Aiko-Server/app/mydispatcher"
+	"github.com/AikoPanel/Aiko-Server/common/mylego"
+	"github.com/AikoPanel/Aiko-Server/common/serverstatus"
 )
 
 type LimitInfo struct {

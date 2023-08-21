@@ -3,8 +3,8 @@ package v2board_test
 import (
 	"testing"
 
-	"github.com/Github-Aiko/AikoR/api"
-	"github.com/Github-Aiko/AikoR/api/v2board"
+	"github.com/AikoPanel/Aiko-Server/api"
+	"github.com/AikoPanel/Aiko-Server/api/v2board"
 )
 
 func CreateClient() api.API {

@@ -15,8 +15,8 @@ import (
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
 
-	"github.com/Github-Aiko/AikoR/api"
-	"github.com/Github-Aiko/AikoR/common/mylego"
+	"github.com/AikoPanel/Aiko-Server/api"
+	"github.com/AikoPanel/Aiko-Server/common/mylego"
 )
 
 // InboundBuilder build Inbound config for different protocol

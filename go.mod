@@ -1,4 +1,4 @@
-module github.com/Github-Aiko/AikoR
+module github.com/AikoPanel/Aiko-Server
 
 go 1.20
 

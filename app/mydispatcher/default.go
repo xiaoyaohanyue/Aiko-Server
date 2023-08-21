@@ -25,8 +25,8 @@ import (
 	"github.com/AikoPanel/Xray-core/transport"
 	"github.com/AikoPanel/Xray-core/transport/pipe"
 
-	"github.com/Github-Aiko/AikoR/common/limiter"
-	"github.com/Github-Aiko/AikoR/common/rule"
+	"github.com/AikoPanel/Aiko-Server/common/limiter"
+	"github.com/AikoPanel/Aiko-Server/common/rule"
 )
 
 var errSniffingTimeout = newError("timeout on sniffing")

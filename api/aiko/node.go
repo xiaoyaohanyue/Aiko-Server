@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/Github-Aiko/AikoR/api"
+	"github.com/AikoPanel/Aiko-Server/api"
 )
 
 // GetNodeInfo will pull NodeInfo Config from panel

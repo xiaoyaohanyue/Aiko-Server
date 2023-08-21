@@ -8,7 +8,7 @@ import (
 
 	// Required features. Can't remove unless there is replacements.
 	// _ "github.com/AikoPanel/Xray-core/app/dispatcher"
-	_ "github.com/Github-Aiko/AikoR/app/mydispatcher"
+	_ "github.com/AikoPanel/Aiko-Server/app/mydispatcher"
 
 	// Default commander and all its services. This is an optional feature.
 	_ "github.com/AikoPanel/Xray-core/app/commander"

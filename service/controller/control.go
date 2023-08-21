@@ -11,8 +11,8 @@ import (
 	"github.com/AikoPanel/Xray-core/features/stats"
 	"github.com/AikoPanel/Xray-core/proxy"
 
-	"github.com/Github-Aiko/AikoR/api"
-	"github.com/Github-Aiko/AikoR/common/limiter"
+	"github.com/AikoPanel/Aiko-Server/api"
+	"github.com/AikoPanel/Aiko-Server/common/limiter"
 )
 
 func (c *Controller) removeInbound(tag string) error {

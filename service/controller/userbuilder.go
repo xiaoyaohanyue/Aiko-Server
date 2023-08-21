@@ -15,7 +15,7 @@ import (
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
 
-	"github.com/Github-Aiko/AikoR/api"
+	"github.com/AikoPanel/Aiko-Server/api"
 )
 
 var AEADMethod = map[shadowsocks.CipherType]uint8{

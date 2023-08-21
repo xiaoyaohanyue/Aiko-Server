@@ -1,6 +1,6 @@
 package panel
 
-import "github.com/Github-Aiko/AikoR/service/controller"
+import "github.com/AikoPanel/Aiko-Server/service/controller"
 
 func getDefaultLogConfig() *LogConfig {
 	return &LogConfig{

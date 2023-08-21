@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-resty/resty/v2"
 
-	"github.com/Github-Aiko/AikoR/api"
+	"github.com/AikoPanel/Aiko-Server/api"
 )
 
 // APIClient create a api client to the panel.

@@ -11,11 +11,11 @@ import (
 	"github.com/AikoPanel/Xray-core/core"
 	"github.com/AikoPanel/Xray-core/infra/conf"
 
-	_ "github.com/Github-Aiko/AikoR/AikoR/distro/all"
-	"github.com/Github-Aiko/AikoR/api"
-	"github.com/Github-Aiko/AikoR/api/sspanel"
-	"github.com/Github-Aiko/AikoR/common/mylego"
-	. "github.com/Github-Aiko/AikoR/service/controller"
+	_ "github.com/AikoPanel/Aiko-Server/AikoR/distro/all"
+	"github.com/AikoPanel/Aiko-Server/api"
+	"github.com/AikoPanel/Aiko-Server/api/sspanel"
+	"github.com/AikoPanel/Aiko-Server/common/mylego"
+	. "github.com/AikoPanel/Aiko-Server/service/controller"
 )
 
 func TestController(t *testing.T) {

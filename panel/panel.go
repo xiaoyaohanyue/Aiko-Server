@@ -6,7 +6,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/Github-Aiko/AikoR/app/mydispatcher"
+	"github.com/AikoPanel/Aiko-Server/app/mydispatcher"
 
 	"github.com/AikoPanel/Xray-core/app/proxyman"
 	"github.com/AikoPanel/Xray-core/app/stats"
@@ -16,16 +16,16 @@ import (
 	"github.com/imdario/mergo"
 	"github.com/r3labs/diff/v2"
 
-	_ "github.com/Github-Aiko/AikoR/AikoR/distro/all"
-	"github.com/Github-Aiko/AikoR/api"
-	"github.com/Github-Aiko/AikoR/api/aiko"
-	"github.com/Github-Aiko/AikoR/api/pmpanel"
-	"github.com/Github-Aiko/AikoR/api/proxypanel"
-	"github.com/Github-Aiko/AikoR/api/sspanel"
-	"github.com/Github-Aiko/AikoR/api/v2board"
-	"github.com/Github-Aiko/AikoR/api/v2raysocks"
-	"github.com/Github-Aiko/AikoR/service"
-	"github.com/Github-Aiko/AikoR/service/controller"
+	_ "github.com/AikoPanel/Aiko-Server/AikoR/distro/all"
+	"github.com/AikoPanel/Aiko-Server/api"
+	"github.com/AikoPanel/Aiko-Server/api/aiko"
+	"github.com/AikoPanel/Aiko-Server/api/pmpanel"
+	"github.com/AikoPanel/Aiko-Server/api/proxypanel"
+	"github.com/AikoPanel/Aiko-Server/api/sspanel"
+	"github.com/AikoPanel/Aiko-Server/api/v2board"
+	"github.com/AikoPanel/Aiko-Server/api/v2raysocks"
+	"github.com/AikoPanel/Aiko-Server/service"
+	"github.com/AikoPanel/Aiko-Server/service/controller"
 )
 
 // Panel Structure

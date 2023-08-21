@@ -10,7 +10,7 @@ import (
 
 	mapset "github.com/deckarep/golang-set"
 
-	"github.com/Github-Aiko/AikoR/api"
+	"github.com/AikoPanel/Aiko-Server/api"
 )
 
 type Manager struct {

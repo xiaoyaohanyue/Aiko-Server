@@ -8,7 +8,7 @@ import (
 	"github.com/AikoPanel/Xray-core/core"
 	"github.com/AikoPanel/Xray-core/infra/conf"
 
-	"github.com/Github-Aiko/AikoR/api"
+	"github.com/AikoPanel/Aiko-Server/api"
 )
 
 // OutboundBuilder build freedom outbound config for addOutbound
