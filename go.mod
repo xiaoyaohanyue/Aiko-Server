@@ -11,11 +11,11 @@ require (
 	github.com/eko/gocache/store/redis/v4 v4.2.0
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/go-acme/lego/v4 v4.13.3
-	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/imdario/mergo v0.3.16
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/r3labs/diff/v2 v2.15.1
+	github.com/redis/go-redis/v9 v9.1.0
 	github.com/sagernet/sing v0.2.9
 	github.com/sagernet/sing-shadowsocks v0.2.4
 	github.com/shirou/gopsutil/v3 v3.23.7
@@ -146,7 +146,6 @@ require (
 	github.com/prometheus/procfs v0.8.0 // indirect
 	github.com/quic-go/qtls-go1-20 v0.3.1 // indirect
 	github.com/quic-go/quic-go v0.37.6 // indirect
-	github.com/redis/go-redis/v9 v9.0.2 // indirect
 	github.com/refraction-networking/utls v1.3.3 // indirect
 	github.com/riobard/go-bloom v0.0.0-20200614022211-cdc8013cb5b3 // indirect
 	github.com/sacloud/api-client-go v0.2.8 // indirect
