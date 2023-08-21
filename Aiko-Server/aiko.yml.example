@@ -45,12 +45,6 @@ Nodes:
         RedisDB: 0 # Redis DB (Redis database number, default 0, no need to change)
         Timeout: 5 # Timeout for Redis request
         Expiry: 60 # Expiry time ( Cache time of online IP, unit: second )
-        ReportLimitConfig:
-          EnableReporting: false # Enable Report Limit to Telegram
-          BotToken: "YOUR_BOT_TOKEN" # Telegram Bot Token
-          ChatIDs: # Chat IDs to send the report to
-            - 123456789
-            - 987654321
       EnableFallback: false # Only support for Trojan and Vless
       FallBackConfigs:  # Support multiple fallbacks
         - SNI: # TLS SNI(Server Name Indication), Empty for any
