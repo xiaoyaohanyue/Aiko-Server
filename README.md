@@ -65,21 +65,21 @@ This project is for my personal learning, development and maintenance only, I do
 
 ## Software installation - release
 ```
-wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/AikoCute-Offical/Aiko-Server-Install/master/Aiko-Server.sh && bash Aiko-Server.sh
+wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/AikoPanel/Aiko-Server-Script/master/install.sh && bash Aiko-Server.sh
 ```
 
 ## Docker
 
 ### Docker installation
 ```
-docker pull aikocute/Aiko-Server/Aiko-Server:latest && docker run --restart=always --name Aiko-Server -d -v ${PATCH_TO_CONFIG}/aiko.yml:/etc/Aiko-Server/aiko.yml --network=host aikocute/Aiko-Server/Aiko-Server:latest
+docker pull aikocute/aikocutehotme:latest && docker run --restart=always --name Aiko-Server -d -v ${PATCH_TO_CONFIG}/aiko.yml:/etc/Aiko-Server/aiko.yml --network=host aikocute/aikocutehotme:latest
 ```
 
 ## Docker-compose installation
 ```
-wget https://raw.githubusercontent.com/AikoCute-Offical/Aiko-Server-Install/master/docker-compose.yml && docker-compose up -d
+wget https://raw.githubusercontent.com/AikoPanel/Aiko-Server-Script/master/docker-compose.yml && docker-compose up -d
 ```
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/AikoCute-Offical/Aiko-Server.svg)](https://starchart.cc/AikoCute-Offical/Aiko-Server)
+[![Stargazers over time](https://starchart.cc/AikoPanel/Aiko-Server.svg)](https://starchart.cc/AikoPanel/Aiko-Server)
