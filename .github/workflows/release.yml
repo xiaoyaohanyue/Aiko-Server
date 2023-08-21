@@ -3,10 +3,22 @@ name: Build and Release
 on:
   workflow_dispatch:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - master
+    paths:
+      - "**/*.go"
+      - "go.mod"
+      - "go.sum"
+      - ".github/workflows/*.yml"
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "**/*.go"
+      - "go.mod"
+      - "go.sum"
+      - ".github/workflows/*.yml"
   release:
-    types: [ published ]
+    types: [published]
 
 jobs:
 
