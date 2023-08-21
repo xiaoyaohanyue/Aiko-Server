@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 ENV CGO_ENABLED=0
 RUN go mod download
-RUN go build -v -o build_assets/Aiko-Server -trimpath -ldflags "-X 'github.com/Github-Aiko/Aiko-Server/cmd.version=$version' -s -w -buildid="
+RUN go build -v -o build_assets/Aiko-Server -trimpath -ldflags "-X 'github.com/AikoPanel/Aiko-Server/cmd.version=$version' -s -w -buildid="
 
 # Release
 FROM  alpine
