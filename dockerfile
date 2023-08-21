@@ -4,13 +4,13 @@ WORKDIR /app
 COPY . .
 ENV CGO_ENABLED=0
 RUN go mod download
-RUN go build -v -o Aiko-Server -trimpath -ldflags "-s -w -buildid=" ./Aiko-Server
+RUN go build -v -o build_assets/Aiko-Server -trimpath -ldflags "-X 'github.com/Github-Aiko/Aiko-Server/cmd.version=$version' -s -w -buildid="
 
 # Release
 FROM  alpine
 RUN  apk --update --no-cache add tzdata ca-certificates \
-    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+    && cp /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
 RUN mkdir /etc/Aiko-Server/
 COPY --from=builder /app/Aiko-Server /usr/local/bin
 
-ENTRYPOINT [ "Aiko-Server", "--config", "/etc/Aiko-Server/aiko.yml"]
+ENTRYPOINT [ "Aiko-Server", "server"]
