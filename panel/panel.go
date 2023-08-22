@@ -24,6 +24,7 @@ import (
 	"github.com/AikoPanel/Aiko-Server/api/sspanel"
 	"github.com/AikoPanel/Aiko-Server/api/v2board"
 	"github.com/AikoPanel/Aiko-Server/api/v2raysocks"
+	"github.com/AikoPanel/Aiko-Server/api/zeropanel"
 	"github.com/AikoPanel/Aiko-Server/service"
 	"github.com/AikoPanel/Aiko-Server/service/controller"
 )
@@ -177,6 +178,8 @@ func (p *Panel) Start() {
 		switch nodeConfig.PanelType {
 		case "AikoPanel":
 			apiClient = aiko.New(nodeConfig.ApiConfig)
+		case "ZeroPanel":
+			apiClient = zeropanel.New(nodeConfig.ApiConfig)
 		case "SSpanel":
 			apiClient = sspanel.New(nodeConfig.ApiConfig)
 		case "V2board":

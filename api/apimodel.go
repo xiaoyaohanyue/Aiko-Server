@@ -46,6 +46,7 @@ type NodeInfo struct {
 	FakeType          string
 	Host              string
 	Path              string
+	Security          string
 	EnableTLS         bool
 	EnableVless       bool
 	VlessFlow         string
@@ -56,6 +57,7 @@ type NodeInfo struct {
 	ServiceName       string
 	Header            json.RawMessage
 	NameServerConfig  []*conf.NameServerConfig
+	RealityConfig     json.RawMessage
 }
 
 type UserInfo struct {
