@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	version  = "TempVersion" //use ldflags replace
+	version  = "AikoCuteHotMe" //use ldflags replace
 	codename = "Aiko-Server"
 	intro    = "A backend based on multi Panel"
 )
