@@ -4,9 +4,6 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"fmt"
-	"strings"
-
-	"github.com/AikoPanel/Aiko-Server/common/crypt"
 
 	"github.com/spf13/cobra"
 	"golang.org/x/crypto/curve25519"
@@ -22,45 +19,52 @@ var x25519Command = cobra.Command{
 
 func init() {
 	command.AddCommand(&x25519Command)
+	x25519Command.Flags().StringVarP(&input_base64, "i", "", "", "Input private key in base64 format")
 }
+
+var input_base64 string
 
 func executeX25519() {
 	var output string
 	var err error
-	defer func() {
-		fmt.Println(output)
-	}()
 	var privateKey []byte
 	var publicKey []byte
-	var yes, key string
-	fmt.Println("Do you want to generate a key based on the node information?(Y/n)")
-	fmt.Scan(&yes)
-	if strings.ToLower(yes) == "y" {
-		var temp string
-		fmt.Println("Please enter the node ID:")
-		fmt.Scan(&temp)
-		key = temp
-		fmt.Println("Please enter the node type:")
-		fmt.Scan(&temp)
-		key += strings.ToLower(temp)
-		fmt.Println("Please enter the Token:")
-		fmt.Scan(&temp)
-		key += temp
-		privateKey = crypt.GenX25519Private([]byte(key))
+
+	if len(input_base64) > 0 {
+		privateKey, err = base64.RawURLEncoding.DecodeString(input_base64)
+		if err != nil {
+			output = err.Error()
+			goto out
+		}
+		if len(privateKey) != curve25519.ScalarSize {
+			output = "Invalid length of private key."
+			goto out
+		}
 	} else {
 		privateKey = make([]byte, curve25519.ScalarSize)
-		if _, err = rand.Read(privateKey); err != nil {
-			output = Err("read rand error: ", err)
-			return
+		_, err = rand.Read(privateKey)
+		if err != nil {
+			output = err.Error()
+			goto out
 		}
+
+		// Modify random bytes using algorithm described at:
+		// https://cr.yp.to/ecdh.html.
+		privateKey[0] &= 248
+		privateKey[31] &= 127
+		privateKey[31] |= 64
 	}
-	if publicKey, err = curve25519.X25519(privateKey, curve25519.Basepoint); err != nil {
-		output = Err("gen X25519 error: ", err)
-		return
+
+	publicKey, err = curve25519.X25519(privateKey, curve25519.Basepoint)
+	if err != nil {
+		output = err.Error()
+		goto out
 	}
-	p := base64.RawURLEncoding.EncodeToString(privateKey)
-	output = fmt.Sprint("Private key: ",
-		p,
-		"\nPublic key: ",
+
+	output = fmt.Sprintf("Private key: %v\nPublic key: %v",
+		base64.RawURLEncoding.EncodeToString(privateKey),
 		base64.RawURLEncoding.EncodeToString(publicKey))
+
+out:
+	fmt.Println(output)
 }
