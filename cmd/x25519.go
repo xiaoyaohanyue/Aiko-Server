@@ -61,7 +61,7 @@ func executeX25519() {
 		goto out
 	}
 
-	output = fmt.Sprintf("Private key: %v\nPublic key: %v",
+	output = fmt.Sprintf("Created by: AikoCute\nPrivate key: %v\nPublic key: %v",
 		base64.RawURLEncoding.EncodeToString(privateKey),
 		base64.RawURLEncoding.EncodeToString(publicKey))
 
