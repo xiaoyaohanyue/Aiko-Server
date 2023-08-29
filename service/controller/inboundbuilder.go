@@ -9,11 +9,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/AikoPanel/Xray-core/common/net"
-	"github.com/AikoPanel/Xray-core/core"
-	"github.com/AikoPanel/Xray-core/infra/conf"
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
+	"github.com/xtls/xray-core/common/net"
+	"github.com/xtls/xray-core/core"
+	"github.com/xtls/xray-core/infra/conf"
 
 	"github.com/AikoPanel/Aiko-Server/api"
 	"github.com/AikoPanel/Aiko-Server/common/mylego"

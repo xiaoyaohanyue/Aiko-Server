@@ -8,13 +8,13 @@ import (
 
 	"github.com/AikoPanel/Aiko-Server/app/mydispatcher"
 
-	"github.com/AikoPanel/Xray-core/app/proxyman"
-	"github.com/AikoPanel/Xray-core/app/stats"
-	"github.com/AikoPanel/Xray-core/common/serial"
-	"github.com/AikoPanel/Xray-core/core"
-	"github.com/AikoPanel/Xray-core/infra/conf"
 	"github.com/imdario/mergo"
 	"github.com/r3labs/diff/v2"
+	"github.com/xtls/xray-core/app/proxyman"
+	"github.com/xtls/xray-core/app/stats"
+	"github.com/xtls/xray-core/common/serial"
+	"github.com/xtls/xray-core/core"
+	"github.com/xtls/xray-core/infra/conf"
 
 	_ "github.com/AikoPanel/Aiko-Server/Aiko-Server/distro/all"
 	"github.com/AikoPanel/Aiko-Server/api"

@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/AikoPanel/Xray-core/common/net"
-	"github.com/AikoPanel/Xray-core/core"
-	"github.com/AikoPanel/Xray-core/infra/conf"
+	"github.com/xtls/xray-core/common/net"
+	"github.com/xtls/xray-core/core"
+	"github.com/xtls/xray-core/infra/conf"
 
 	"github.com/AikoPanel/Aiko-Server/api"
 )

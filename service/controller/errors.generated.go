@@ -1,6 +1,6 @@
 package controller
 
-import "github.com/AikoPanel/Xray-core/common/errors"
+import "github.com/xtls/xray-core/common/errors"
 
 func newError(values ...interface{}) *errors.Error {
 	return errors.New(values...)

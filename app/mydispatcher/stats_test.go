@@ -3,9 +3,9 @@ package mydispatcher_test
 import (
 	"testing"
 
-	. "github.com/AikoPanel/Xray-core/app/dispatcher"
-	"github.com/AikoPanel/Xray-core/common"
-	"github.com/AikoPanel/Xray-core/common/buf"
+	. "github.com/xtls/xray-core/app/dispatcher"
+	"github.com/xtls/xray-core/common"
+	"github.com/xtls/xray-core/common/buf"
 )
 
 type TestCounter int64
