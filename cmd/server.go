@@ -26,7 +26,7 @@ var serverCmd = &cobra.Command{
 }
 
 func init() {
-	serverCmd.Flags().StringVarP(&configFile, "config", "c", "", "Config file for Aiko-Server.")
+	serverCmd.Flags().StringVarP(&configFile, "config", "c", "/etc/Aiko-Server/aiko.yml", "Config file for Aiko-Server.")
 	command.AddCommand(serverCmd)
 }
 
@@ -67,15 +67,7 @@ func serverHandle(_ *cobra.Command, _ []string) {
 func getConfig() *viper.Viper {
 	config := viper.New()
 
-	// Set the default config file path
-	defaultConfigPath := "/etc/Aiko-Server"
-	defaultConfigFileName := "aiko.yml"
-	defaultConfigFilePath := path.Join(defaultConfigPath, defaultConfigFileName)
-
-	// Check if configFile is empty, if so, use the default path
-	if configFile == "" {
-		config.SetConfigFile(defaultConfigFilePath)
-	} else {
+	if configFile != "" {
 		configName := path.Base(configFile)
 		configFileExt := path.Ext(configFile)
 		configNameOnly := strings.TrimSuffix(configName, configFileExt)
@@ -85,6 +77,10 @@ func getConfig() *viper.Viper {
 		config.AddConfigPath(configPath)
 		os.Setenv("XRAY_LOCATION_ASSET", configPath)
 		os.Setenv("XRAY_LOCATION_CONFIG", configPath)
+	} else {
+		config.SetConfigName("aiko")
+		config.SetConfigType("yml")
+		config.AddConfigPath(".")
 	}
 
 	if err := config.ReadInConfig(); err != nil {
