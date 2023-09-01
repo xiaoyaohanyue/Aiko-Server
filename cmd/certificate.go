@@ -22,7 +22,7 @@ var (
 	certCommonName   string
 	certOrganization string
 	certIsCA         bool
-	certExpire       time.Duration
+	certExpireDays   int
 	certFilePath     string
 )
 
@@ -32,7 +32,7 @@ func init() {
 	certCommand.Flags().StringVarP(&certCommonName, "name", "", "Aiko-Server Inc", "The common name of this certificate")
 	certCommand.Flags().StringVarP(&certOrganization, "org", "", "Aiko-Server Inc", "Organization of the certificate")
 	certCommand.Flags().BoolVarP(&certIsCA, "ca", "", false, "Whether this certificate is a CA")
-	certCommand.Flags().DurationVarP(&certExpire, "expire", "", time.Hour*24*90, "Time until the certificate expires. Default value 3 months.")
+	certCommand.Flags().IntVarP(&certExpireDays, "expire", "", 90, "Number of days until the certificate expires. Default value 90 days.")
 	certCommand.Flags().StringVarP(&certFilePath, "output", "", "/etc/Aiko-Server/cert", "Save certificate in file.")
 }
 
@@ -43,7 +43,7 @@ func executeCert(cmd *cobra.Command, args []string) {
 		opts = append(opts, cert.KeyUsage(x509.KeyUsageCertSign|x509.KeyUsageKeyEncipherment|x509.KeyUsageDigitalSignature))
 	}
 
-	opts = append(opts, cert.NotAfter(time.Now().Add(certExpire)))
+	opts = append(opts, cert.NotAfter(time.Now().Add(time.Duration(certExpireDays)*24*time.Hour)))
 	opts = append(opts, cert.CommonName(certCommonName))
 	if len(certDomainNames) > 0 {
 		opts = append(opts, cert.DNSNames(certDomainNames...))

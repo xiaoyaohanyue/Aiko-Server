@@ -5,7 +5,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/xtls/xray-core/common/protocol/tls/cert" // Import the package that defines Certificate type
+	"github.com/xtls/xray-core/common/protocol/tls/cert"
 )
 
 func TestExecuteCert(t *testing.T) {
@@ -13,7 +13,7 @@ func TestExecuteCert(t *testing.T) {
 	certCommand.Flags().Set("name", "Test Cert")
 	certCommand.Flags().Set("org", "Test Org")
 	certCommand.Flags().Set("ca", "false")
-	certCommand.Flags().Set("expire", "24")
+	certCommand.Flags().Set("expire", "90")
 	certCommand.Flags().Set("output", "/Users/aiko/Documents/GitHub/Aiko-Server/test/cert")
 
 	executeCert(certCommand, nil)
