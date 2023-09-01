@@ -13,8 +13,7 @@ func TestExecuteCert(t *testing.T) {
 	certCommand.Flags().Set("name", "Test Cert")
 	certCommand.Flags().Set("org", "Test Org")
 	certCommand.Flags().Set("ca", "false")
-	certCommand.Flags().Set("file", "test_cert")
-	certCommand.Flags().Set("expire", "24h")
+	certCommand.Flags().Set("expire", "24")
 	certCommand.Flags().Set("output", "/Users/aiko/Documents/GitHub/Aiko-Server/test/cert")
 
 	executeCert(certCommand, nil)

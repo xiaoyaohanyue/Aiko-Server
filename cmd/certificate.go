@@ -12,7 +12,7 @@ import (
 )
 
 var certCommand = &cobra.Command{
-	Use:   "cert",
+	Use:   "certificate",
 	Short: "Generate TLS certificates",
 	Run:   executeCert,
 }
@@ -22,7 +22,6 @@ var (
 	certCommonName   string
 	certOrganization string
 	certIsCA         bool
-	certFileOutput   string
 	certExpire       time.Duration
 	certFilePath     string
 )
@@ -33,7 +32,6 @@ func init() {
 	certCommand.Flags().StringVarP(&certCommonName, "name", "", "Aiko-Server Inc", "The common name of this certificate")
 	certCommand.Flags().StringVarP(&certOrganization, "org", "", "Aiko-Server Inc", "Organization of the certificate")
 	certCommand.Flags().BoolVarP(&certIsCA, "ca", "", false, "Whether this certificate is a CA")
-	certCommand.Flags().StringVarP(&certFileOutput, "file", "", "", "Save certificate in file.")
 	certCommand.Flags().DurationVarP(&certExpire, "expire", "", time.Hour*24*90, "Time until the certificate expires. Default value 3 months.")
 	certCommand.Flags().StringVarP(&certFilePath, "output", "", "/etc/Aiko-Server/cert", "Save certificate in file.")
 }
