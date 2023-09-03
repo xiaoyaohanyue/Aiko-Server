@@ -27,7 +27,7 @@ var serverCmd = &cobra.Command{
 }
 
 func init() {
-	// serverCmd.Flags().StringVarP(&configFile, "config", "c", "/etc/Aiko-Server/aiko.yml", "Custom configuration file path.")
+	serverCmd.Flags().StringVarP(&configFile, "config", "c", "", "Custom configuration file path.")
 	serverCmd.Flags().StringVarP(&configFormat, "format", "f", "yml", "Configuration file format (json or yml).")
 	command.AddCommand(serverCmd)
 }
