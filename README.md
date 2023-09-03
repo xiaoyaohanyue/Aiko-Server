@@ -72,7 +72,12 @@ wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/
 
 ### Docker installation
 ```
-docker pull aikocute/aikocutehotme:latest && docker run --restart=always --name Aiko-Server -d -v ${PATCH_TO_CONFIG}/aiko.yml:/etc/Aiko-Server/aiko.yml --network=host aikocute/aikocutehotme:latest
+docker pull aikocute/aikocutehotme:latest && docker run --restart=always --name Aiko-Server -d \
+  -e FORMAT=yml \
+  -v ${PATH_TO_CONFIG}/aiko.yml:/etc/Aiko-Server/aiko.yml \
+  --network=host \
+  aikocute/aikocutehotme:latest
+
 ```
 
 ## Docker-compose installation

@@ -13,4 +13,4 @@ RUN  apk --update --no-cache add tzdata ca-certificates \
 RUN mkdir /etc/Aiko-Server/
 COPY --from=builder /app/Aiko-Server /usr/local/bin
 
-CMD [ "Aiko-Server", "server"]
+CMD [ "Aiko-Server", "server", "--format", "$FORMAT" ]
