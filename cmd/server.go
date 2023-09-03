@@ -18,7 +18,7 @@ import (
 )
 
 var configFile string
-var configFormat string // Thêm biến để lưu định dạng cấu hình
+var configFormat string
 
 var serverCmd = &cobra.Command{
 	Use:   "server",
@@ -34,9 +34,7 @@ func init() {
 
 func serverHandle(_ *cobra.Command, _ []string) {
 	showVersion()
-	// Kiểm tra xem người dùng đã chỉ định file cấu hình hay không
 	if configFile == "" {
-		// Nếu không, sử dụng đường dẫn mặc định dựa trên định dạng được chỉ định
 		configFile = "/etc/Aiko-Server/aiko." + configFormat
 	}
 	config := getConfig()
