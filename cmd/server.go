@@ -18,6 +18,7 @@ import (
 )
 
 var configFile string
+var configFormat string // Thêm biến để lưu định dạng cấu hình
 
 var serverCmd = &cobra.Command{
 	Use:   "server",
@@ -26,12 +27,18 @@ var serverCmd = &cobra.Command{
 }
 
 func init() {
-	serverCmd.Flags().StringVarP(&configFile, "config", "c", "/etc/Aiko-Server/aiko.yml", "Config file for Aiko-Server.")
+	// serverCmd.Flags().StringVarP(&configFile, "config", "c", "/etc/Aiko-Server/aiko.yml", "Custom configuration file path.")
+	serverCmd.Flags().StringVarP(&configFormat, "format", "f", "yml", "Configuration file format (json or yml).")
 	command.AddCommand(serverCmd)
 }
 
 func serverHandle(_ *cobra.Command, _ []string) {
 	showVersion()
+	// Kiểm tra xem người dùng đã chỉ định file cấu hình hay không
+	if configFile == "" {
+		// Nếu không, sử dụng đường dẫn mặc định dựa trên định dạng được chỉ định
+		configFile = "/etc/Aiko-Server/aiko." + configFormat
+	}
 	config := getConfig()
 	panelConfig := &panel.Config{}
 	if err := config.Unmarshal(panelConfig); err != nil {
