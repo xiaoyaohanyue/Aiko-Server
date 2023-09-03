@@ -78,9 +78,21 @@ func getConfig() *viper.Viper {
 		os.Setenv("XRAY_LOCATION_ASSET", configPath)
 		os.Setenv("XRAY_LOCATION_CONFIG", configPath)
 	} else {
+		// test with default config file name
 		config.SetConfigName("aiko")
 		config.SetConfigType("yml")
 		config.AddConfigPath(".")
+		if err := config.ReadInConfig(); err != nil {
+			// if not found, try to read from "aiko.yml"
+			config.SetConfigType("yaml")
+			if err := config.ReadInConfig(); err != nil {
+				// if not found, try to read from "aiko.json"
+				config.SetConfigType("json")
+				if err := config.ReadInConfig(); err != nil {
+					fmt.Printf("Config file error: %s\n", err)
+				}
+			}
+		}
 	}
 
 	if err := config.ReadInConfig(); err != nil {
