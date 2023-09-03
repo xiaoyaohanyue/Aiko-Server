@@ -87,19 +87,8 @@ func getConfig() *viper.Viper {
 	} else {
 		// test with default config file name
 		config.SetConfigName("aiko")
-		config.SetConfigType("yml")
-		config.AddConfigPath(".")
-		if err := config.ReadInConfig(); err != nil {
-			// if not found, try to read from "aiko.yml"
-			config.SetConfigType("yaml")
-			if err := config.ReadInConfig(); err != nil {
-				// if not found, try to read from "aiko.json"
-				config.SetConfigType("json")
-				if err := config.ReadInConfig(); err != nil {
-					fmt.Printf("Config file error: %s\n", err)
-				}
-			}
-		}
+		config.SetConfigType(configFormat)
+		config.AddConfigPath(".") // look for config in the working directory
 	}
 
 	if err := config.ReadInConfig(); err != nil {
