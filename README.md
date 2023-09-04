@@ -71,8 +71,12 @@ wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/
 ## Docker
 
 ### Docker installation
+- Edit your configuration file `aiko.yml`
+- Choose FORMAT config `yml` or `json`
+- Run docker command
 ```
 docker pull aikocute/aikocutehotme:latest && docker run --restart=always --name Aiko-Server -d \
+  -e FORMAT=yml \
   -e DOMAIN=<your_domain_value> \
   -e EXPIRE=90 \
   -v ${PATH_TO_CONFIG}/aiko.yml:/etc/Aiko-Server/aiko.yml \
