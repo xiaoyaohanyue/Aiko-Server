@@ -14,5 +14,4 @@ RUN apk --update --no-cache add tzdata ca-certificates \
 RUN mkdir /etc/Aiko-Server/
 COPY --from=builder /app/build_assets/Aiko-Server /usr/local/bin/Aiko-Server
 
-# Thiết lập CMD để chạy script và sử dụng biến môi trường
-CMD ["Aiko-Server", "certificate", "--domain", "$DOMAIN", "--expire", "$EXPIRE", "&&", "Aiko-Server", "server", "--config", "$CONFIGPATH"]
+CMD ["sh", "-c", "Aiko-Server certificate --domain $DOMAIN --expire $EXPIRE && Aiko-Server server --config $CONFIGPATH"]
