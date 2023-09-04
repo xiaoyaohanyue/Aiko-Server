@@ -11,20 +11,19 @@ import (
 )
 
 var createConfigCmd = &cobra.Command{
-	Use:   "createconfig",
-	Short: "Create a configuration file from a remote URL and save it to /etc/Aiko-Server/",
+	Use:   "config",
+	Short: "Create a configuration file from a remote URL and save it to /etc/Aiko-Server/aiko.yml",
 	Run:   createConfig,
 }
 
 var configFileType string // Flag to specify the config file type (yaml, yml, json)
 
 func init() {
-	createConfigCmd.Flags().StringVarP(&configFileType, "type", "t", "yml", "Config file type (yaml, yml, json)")
 	command.AddCommand(createConfigCmd)
 }
 
 func createConfig(_ *cobra.Command, _ []string) {
-	configURL := "https://raw.githubusercontent.com/AikoPanel/Aiko-Server/master/Aiko-Server/config/aiko." + strings.ToLower(configFileType) + ".example"
+	configURL := "https://raw.githubusercontent.com/AikoPanel/Aiko-Server/master/Aiko-Server/config/aiko.yml.example"
 	response, err := http.Get(configURL)
 	if err != nil {
 		fmt.Printf("Error downloading configuration from URL: %s\n", err)

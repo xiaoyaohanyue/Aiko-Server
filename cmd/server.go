@@ -18,7 +18,6 @@ import (
 )
 
 var configFile string
-var configFormat string
 
 var serverCmd = &cobra.Command{
 	Use:   "server",
@@ -28,15 +27,11 @@ var serverCmd = &cobra.Command{
 
 func init() {
 	serverCmd.Flags().StringVarP(&configFile, "config", "c", "", "Custom configuration file path.")
-	serverCmd.Flags().StringVarP(&configFormat, "format", "f", "yml", "Configuration file format (json or yml).")
 	command.AddCommand(serverCmd)
 }
 
 func serverHandle(_ *cobra.Command, _ []string) {
 	showVersion()
-	if configFile == "" {
-		configFile = "/etc/Aiko-Server/aiko." + configFormat
-	}
 	config := getConfig()
 	panelConfig := &panel.Config{}
 	if err := config.Unmarshal(panelConfig); err != nil {
@@ -85,7 +80,7 @@ func getConfig() *viper.Viper {
 	} else {
 		// test with default config file name
 		config.SetConfigName("aiko")
-		config.SetConfigType(configFormat)
+		config.SetConfigType("yml")
 		config.AddConfigPath(".") // look for config in the working directory
 	}
 

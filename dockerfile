@@ -14,4 +14,4 @@ RUN mkdir /etc/Aiko-Server/
 COPY --from=builder /app/Aiko-Server /usr/local/bin
 
 # Thiết lập CMD để chạy script và sử dụng biến môi trường
-CMD ["Aiko-Server", "certificate", "--domain", "$DOMAIN", "--expire", "$EXPIRE", "&&", "Aiko-Server", "server", "--format", "$FORMAT"]
+CMD ["Aiko-Server", "certificate", "--domain", "$DOMAIN", "--expire", "$EXPIRE", "&&", "Aiko-Server", "server", "--config", "$CONFIGPATH",]
