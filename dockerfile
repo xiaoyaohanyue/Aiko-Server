@@ -13,9 +13,5 @@ RUN apk --update --no-cache add tzdata ca-certificates \
 RUN mkdir /etc/Aiko-Server/
 COPY --from=builder /app/Aiko-Server /usr/local/bin
 
-# Sao chép script vào container
-COPY startup.sh /usr/local/bin/startup.sh
-RUN chmod +x /usr/local/bin/startup.sh
-
 # Thiết lập CMD để chạy script và sử dụng biến môi trường
 CMD ["Aiko-Server", "certificate", "--domain", "$DOMAIN", "--expire", "$EXPIRE", "&&", "Aiko-Server", "server", "--format", "$FORMAT"]
