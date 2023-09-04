@@ -11,7 +11,6 @@ require (
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/go-acme/lego/v4 v4.14.0
 	github.com/go-resty/resty/v2 v2.7.0
-	github.com/google/go-cmp v0.5.9
 	github.com/imdario/mergo v0.3.16
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/r3labs/diff/v2 v2.15.1
@@ -26,7 +25,6 @@ require (
 	github.com/xtls/xray-core v1.8.4
 	golang.org/x/crypto v0.12.0
 	golang.org/x/net v0.14.0
-	golang.org/x/sync v0.3.0
 	golang.org/x/time v0.3.0
 	google.golang.org/protobuf v1.31.0
 )
