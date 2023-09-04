@@ -73,17 +73,22 @@ wget --no-check-certificate -O Aiko-Server.sh https://raw.githubusercontent.com/
 ### Docker installation
 ```
 docker pull aikocute/aikocutehotme:latest && docker run --restart=always --name Aiko-Server -d \
-  -e FORMAT=yml \
+  -e DOMAIN=<your_domain_value> \
+  -e EXPIRE=90 \
   -v ${PATH_TO_CONFIG}/aiko.yml:/etc/Aiko-Server/aiko.yml \
   --network=host \
   aikocute/aikocutehotme:latest
-
 ```
 
 ## Docker-compose installation
 ```
-wget https://raw.githubusercontent.com/AikoPanel/Aiko-Server-Script/master/docker-compose.yml && docker-compose up -d
+git clone https://github.com/AikoPanel/Aiko-Server-Script.git
+cd Aiko-Server-Script
 ```
+
+- Edit your configuration file `aiko.yml`
+- Edit your docker-compose.yml file
+- Run `docker-compose up -d`
 
 ## Stargazers over time
 
